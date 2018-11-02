@@ -1,19 +1,29 @@
 import java.util.Scanner;
 
+// This shit should be available also on prof's site.
+
 public class EmployeeInfo {
 	
-	private StringBuilder name
+	private StringBuilder name;
 	private String code;
 	
-	public StringBuilder getName()
+	public employeeInfo() {
+		setName();
+	}
 	
-	public String getcode(){;}
+	public StringBuilder getName() {
+		return name;
+	}
+	
+	public String getcode(){
+		return code;
+	}
 	
 	//We know
-	private void setNam(){
+	private void setName() {
 		String nameString = inputName();
-		name = new StringBuilder(nameString) // one of the constructor for namebuiolder accepts a string(nameString here)
-		createEmployeeCode(StringBuilder name)
+		name = new StringBuilder(nameString); // one of the constructor for name builder accepts a string(nameString here)
+		createEmployeeCode(name);
 	}
 	
 	// Here we set the code.
