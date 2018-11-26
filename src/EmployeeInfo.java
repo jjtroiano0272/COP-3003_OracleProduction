@@ -7,13 +7,6 @@ public class EmployeeInfo {
 	private StringBuilder name;
 	private String code;
 	
-	//We know
-	private void setName() {
-		String nameString = inputName();
-		name = new StringBuilder(nameString);
-		createEmployeeCode(name);
-	}
-	
 	/**
 	 * Checks that the name the user enters for employee is in the correct format, e.g. "John Doe"
 	 * with a space separating both names then generates the employee's code by taking the first
@@ -24,18 +17,45 @@ public class EmployeeInfo {
 	 */
 	private void createEmployeeCode(StringBuilder name) {
 		if (checkName(name)) { // Checks for existence of mid string space
-			code = ((name.charAt(0)) + name.substring(name.indexOf(" " + 1), name.length() - 1)).toLowerCase();
+			this.code = ((name.charAt(0)) + name.substring(name.indexOf(" " + 1), name.length() - 1)).toLowerCase();
 		} else {
-			code = "guest";
+			this.code = "guest";
 		}
 	}
-	
+	/**
+	 * Reads in a name to associate with employee code. This prompts you for a name then returns that
+	 * name so that it can be passed to a containing function.
+	 *
+	 * @return
+	 */
 	private String inputName() {
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Print name:");
-		name = scan.;
+		System.out.print("Print name: ");
+		String nameString = scan.next();
+		this.name = new StringBuilder(nameString); // This might be able to be more elegant by passing it to setName.
 		scan.close();
 		return nameString;
+	}
+	
+	/* CURRENTLY SET OFFLINE: MAY BE FAULTY CODE. SEE BELOW METHOD FOR IMPROVEMENT.
+	/**
+	 * TODO: The fuck exactly does this do? What's its function???
+	 *
+	private void setName() {
+		String nameString = inputName();
+		this.name = new StringBuilder(nameString);
+		createEmployeeCode(name);
+	}
+	*/
+	
+	// TODO: Should this be private? That seems incorrect.
+	
+	/**
+	 * I'm starting off assuming that this will work like a standard setter, taking a String input and
+	 * setting the StringBuilder name to be a StringBuilder type.
+	 */
+	private void setName(String inputName) {
+		this.name = new StringBuilder(inputName);
 	}
 	
 	/**
@@ -52,7 +72,7 @@ public class EmployeeInfo {
 	}
 	
 	public EmployeeInfo() {
-		setName();
+		setName(inputName());
 	}
 	
 	public StringBuilder getName() {
