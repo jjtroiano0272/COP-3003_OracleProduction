@@ -2,8 +2,14 @@ import java.util.Collections;
 
 public class MoviePlayer extends Product implements MultimediaControl {
 	
-	String screen;
-	MonitorType monitorType;
+	private String screen;
+	private MonitorType monitorType;
+	
+	@Override
+	/**
+	 * Method from interface Item, which super Product implements. Reference UML for more information.
+	 */
+	public void setName(String name) {}
 	
 	@Override
 	public void play() {
