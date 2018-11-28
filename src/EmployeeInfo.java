@@ -43,6 +43,8 @@ public class EmployeeInfo {
 	 *
 	 * I'm starting off assuming that this will work like a standard setter, taking a String input and
 	 * setting the StringBuilder name to be a StringBuilder type.
+	 *
+	 *
 	 */
 	/*
 	public void setName(String inputName()) {
@@ -60,9 +62,9 @@ public class EmployeeInfo {
     function.run();
     }
 	*/
-	public void setName(StringBuilder name) {
-		inputName();
-		this.name = name;
+	private void setName(StringBuilder name) {
+		String nameString = inputName();
+		this.name = new StringBuilder(nameString);
 	}
 	
 	/**
@@ -82,7 +84,7 @@ public class EmployeeInfo {
 	 * be set to the employee's name.
 	 */
 	public EmployeeInfo() {
-		setName(inputName());
+		setName();
 	}
 	
 	public StringBuilder getName() {
