@@ -67,10 +67,10 @@ public class EmployeeInfo {
 	}
 	
 	public StringBuilder getName() {
-		return name;
+		return this.name;
 	}
 	
 	public String getCode() {
-		return code;
+		return this.code;
 	}
 }

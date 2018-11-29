@@ -1,7 +1,7 @@
-public class TestProductionLine {
+public class TestProductionLine extends EmployeeInfo {
 	
 	EmployeeInfo employeeObj = new EmployeeInfo();
-	employeeObj.
+	employeeObj.g   // Nothing pops up!
 	
 	
 }
