@@ -3,28 +3,33 @@ import java.util.Date;
 
 public abstract class Product implements Item, Comparable<Product> {
 	
-	int serialNumber;
-	String manufacturer;
-	Date manufacturedOn;
-	String name;
-	Integer currentProductionNumber;
+	private int serialNumber;
+	private String manufacturer;
+	private Date manufacturedOn;
+	private String name;
+	private Integer currentProductionNumber;
+	
+	@Override
+	public int compareTo(Product otherProduct) {
+		return name.compareTo(otherProduct.getName());
+	}
 	
 	@Override
 	public void setProductionNumber(int num) {}
 	
 	@Override
 	public String getName() {
-		return null;
+		return this.name;
 	}
 	
 	@Override
 	public Date getManufacturedDate() {
-		return null;
+		return this.manufacturedOn;
 	}
 	
 	@Override
 	public int getSerialNumber() {
-		return 0;
+		return this.serialNumber;
 	}
 	
 	Product() {

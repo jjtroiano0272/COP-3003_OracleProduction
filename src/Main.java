@@ -1,16 +1,17 @@
 import java.util.Collections;
 
+/**
+ * Creates objects of the other classes and sorts those objects. Everything in this class will be
+ * running inside a pleasing user interface.
+ *
+ * @author Jonathan Troiano
+ */
 public class Main {
 	
 	public static void main(String[] args) {
-		/*
-		 * Demonstrations/Instantiations of the following classes to exhibit FULL functionality,
-		 * meaning test all of its code on the resulting object:
-		 *   AudioPlayer
-		 *   MoviePlayer
-		 *   Screen
-		 *   ViewFileInfo
-		 * */
+		// This stuff is alsso available on REPL.it 16.
+		// TODO: Add an arrayList that we'll use to store the Product objects and then sort that.
+		
 		// TODO: Test features
 		AudioPlayer audioPlayerObj = new AudioPlayer();
 		audioPlayerObj.toString();
