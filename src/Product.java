@@ -1,6 +1,10 @@
 import java.text.DateFormat;
 import java.util.Date;
 
+/**
+ * The implementation of Comparable here allows us to compare or, in this case sort, objects
+ * of this class by some field.
+ */
 public abstract class Product implements Item, Comparable<Product> {
 	
 	private int serialNumber;
@@ -9,6 +13,12 @@ public abstract class Product implements Item, Comparable<Product> {
 	private String name;
 	private Integer currentProductionNumber;
 	
+	/**
+	 * This is sorting by String name for now.
+	 *
+	 * @param otherProduct
+	 * @return
+	 */
 	@Override
 	public int compareTo(Product otherProduct) {
 		return name.compareTo(otherProduct.getName());

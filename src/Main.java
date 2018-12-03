@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Collections;
 
 /**
@@ -11,6 +12,8 @@ public class Main {
 	public static void main(String[] args) {
 		// This stuff is alsso available on REPL.it 16.
 		// TODO: Add an arrayList that we'll use to store the Product objects and then sort that.
+		ArrayList productsArray = new ArrayList();
+		productsArray.sort(Comparable<Product>);
 		
 		// TODO: Test features
 		AudioPlayer audioPlayerObj = new AudioPlayer();
