@@ -11,7 +11,7 @@ public class Main {
 	
 	public static void main(String[] args) {
 		// This stuff is alsso available on REPL.it 16.
-		// TODO: Add an arrayList that we'll use to store the Product objects and then sort that.
+		// TODO: Add an arrayList that we'll use to store the Product objects and then sort that.f
 		ArrayList productsArray = new ArrayList();
 		productsArray.sort(Comparable<Product>);
 		
@@ -39,8 +39,9 @@ public class Main {
 		oppositeObj2.play();
 		
 		/**
-		 * This is supposed to allow us to sort all the objects we are creating.
+		 * This is supposed to allow us to sort all the objects we are creating. This should be sorting
+		 * a list of the objects.
 		 */
-		Collections.sort(audioPlayerObj);
+		Collections.sort();
 	}
 }

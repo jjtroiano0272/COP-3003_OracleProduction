@@ -1,7 +1,9 @@
 public class TestProductionLine extends EmployeeInfo {
 	
-	EmployeeInfo employeeObj = new EmployeeInfo();
-	employeeObj.g   // Nothing pops up!
-	
+	public static void main(String[] args) {
+		EmployeeInfo employeeObj = new EmployeeInfo();
+		employeeObj.getCode();
+		
+	}
 	
 }
