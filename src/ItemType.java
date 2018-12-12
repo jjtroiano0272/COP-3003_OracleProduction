@@ -1,5 +1,5 @@
 public enum ItemType {
-	
-	AU, VI, AM, VM
-	
+  
+  AU, VI, AM, VM
+  
 }
