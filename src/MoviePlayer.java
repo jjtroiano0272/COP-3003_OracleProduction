@@ -5,6 +5,10 @@ public class MoviePlayer extends Product implements MultimediaControl {
   private String screen;
   private MonitorType monitorType;
   
+  public MoviePlayer(String name) {
+    screen = name;
+  }
+  
   /**
    * Method from interface Item, which super Product implements. Reference UML for more information.
    * NOTE: I previously had this be overridden--may be useful?
