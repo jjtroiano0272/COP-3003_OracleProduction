@@ -9,8 +9,6 @@ public enum ItemType {
   
   /**
    * Similar construction to a regular class constructor.
-   *
-   * @param type
    */
   ItemType(String type) {
     this.code = type;

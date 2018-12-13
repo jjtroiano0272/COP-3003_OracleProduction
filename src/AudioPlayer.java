@@ -1,4 +1,5 @@
 import java.util.Collections;
+import java.util.Date;
 
 /**
  * This method was previously throwing an error because not all the methods from Item and
@@ -6,12 +7,21 @@ import java.util.Collections;
  */
 public class AudioPlayer extends Product implements MultimediaControl {
   
+  // TODO: Should these be public?
   private String audioSpecification;
   private ItemType mediaType;
   
+  /**
+   * Creates an object of AudioPlayer according to super class Product constructor and adds details
+   * specific to audio players.
+   *
+   * @param name Name of the object you create.
+   * @param audioSpecification Defines the details of the named audio player.
+   */
   public AudioPlayer(String name, String audioSpecification) {
-    super();
-    mediaType = ItemType.AU;
+    super(name);
+    mediaType = ItemType.AUDIO;
+    this.audioSpecification = audioSpecification; // TODO: is this malformed? Does the logic make sense?
   }
   
   @Override
@@ -25,7 +35,7 @@ public class AudioPlayer extends Product implements MultimediaControl {
   }
   
   @Override
-  public java.util.Date getManufacturedDate() {
+  public Date getManufacturedDate() {
     return super.getManufacturedDate();
   }
   
@@ -35,41 +45,31 @@ public class AudioPlayer extends Product implements MultimediaControl {
   }
   
   public void play() {
-    System.out.println("Playing now, on an audio device!");
+    System.out.println("Playing");
   }
   
   public void stop() {
-    System.out.println("SCREECH! Stopped. (of course, on your audio device)");
+    System.out.println("Stopping");
   }
   
-  public void previous() {
-    System.out.println("Playing previous track. (what is that, the iWalkman)");
-  }
+  public void next() { System.out.println("Next"); }
   
-  public void next() {
-    System.out.println("You ready to hear that next track? It's on an audio device, but I'm sure"
-        + "you already knew that.");
-  }
+  public void previous() { System.out.println("Previous"); }
+  
   
   /**
    * Returns super's toString as well as details for audioSpecification and mediaType.
    *
-   * @return Output: Audio Spec: _____
-   *                 Type: _____
+   * @return Output: Audio Spec: _____ Type: _____
    */
   public String toString() {
-    super.toString();
-    return "Audio Spec: " + audioSpecification +
-          "Type: " + mediaType;
+    return  super.toString() +
+            "Audio Spec: " + audioSpecification + "\n" +
+            "Type: " + mediaType + "\n";
   }
   
   public static void main(String[] args) {
-    /*	TODO: this will be used to test:
-     * If we can instantiate occurrences of AudioPlayer
-     * Use media controls
-     * Print media controls details to console.
-     */
-    
+  
   }
   
 }
