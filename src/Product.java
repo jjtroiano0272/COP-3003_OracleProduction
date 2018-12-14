@@ -11,7 +11,8 @@ public abstract class Product implements Item, Comparable<Product> {
   private String manufacturer;
   private Date manufacturedOn;
   private String name;
-  private static int currentProductionNumber = 0; // From prompt "store as integer CLASS VARIABLE"--thus, static.
+  private static int currentProductionNumber = 1; // From prompt "store as integer CLASS
+  // VARIABLE"--thus, static.
   
   /**
    * This is sorting by String name for now.
@@ -64,6 +65,11 @@ public abstract class Product implements Item, Comparable<Product> {
   /**
    * Passes the Product object which has been constructed, (meaning Date gets current Date/time by
    * default Date constructor.)
+   *
+   * Output:  Manufacturer: _____
+   *          Serial Number: _____
+   *          Date: _____
+   *          Name: _____
    */
   public String toString() {
     return  "Manufacturer: " + this.manufacturer + "\n" +

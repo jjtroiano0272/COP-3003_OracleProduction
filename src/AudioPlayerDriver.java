@@ -19,15 +19,14 @@ public class AudioPlayerDriver {
    *    "defaultAudioSpec"
    */
   public static void testAudioPlayer() {
-    System.out.println("[JT] in AudioPlayerDriver.testAudioPlayer; creating a new AudioPlayer object now.");
-    AudioPlayer audioPlayerObj = new AudioPlayer("newAudioPlayer", "defaultAudioSpec");
+    AudioPlayer ipodMiniObj = new AudioPlayer("iPod Mini", "MP3");
+    AudioPlayer walkmanObj = new AudioPlayer("Walkman", "WAV");
 
-    audioPlayerObj.play();
-    audioPlayerObj.stop();
-    audioPlayerObj.next();
-    audioPlayerObj.previous();
+    ipodMiniObj.play();
+    ipodMiniObj.stop();
+    ipodMiniObj.next();
+    ipodMiniObj.previous();
     
-    System.out.println("[JT] Printing details of audioPlayerObj object.");
     /**
      * This is what is supposed to print:
      *
@@ -38,7 +37,8 @@ public class AudioPlayerDriver {
      *    Audio Spec : MP3
      *    Type : AUDIO
      */
-    audioPlayerObj.toString();
+    System.out.println(ipodMiniObj.toString());
+    System.out.println(walkmanObj.toString());
   }
  
 }
