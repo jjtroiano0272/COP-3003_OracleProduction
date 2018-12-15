@@ -1,9 +1,20 @@
+/**
+ * @author      Jonathan J. Troiano
+ * @date        Last updated December 15, 2018
+ * @description This is a class emblematic of actual audio players that are to be created. All
+ *              of these audio players will receive the functionality of MultimediaControl interface
+ *              (play, stop, previous, next)
+ */
+
 import java.util.Collections;
 import java.util.Date;
 
 /**
- * This method was previously throwing an error because not all the methods from Item and
- * MultimediaControl were implemented.
+ * This is the blueprint for all audio players. Because it also extends Product, all audio
+ * players will have the following fields:
+ *    audioSpecification
+ *    mediaType
+ *
  */
 public class AudioPlayer extends Product implements MultimediaControl {
   
@@ -13,14 +24,20 @@ public class AudioPlayer extends Product implements MultimediaControl {
   
   /**
    * Creates an object of AudioPlayer according to super class Product constructor and adds details
-   * specific to audio players.
+   * specific to audio players. Upon construction holds the fields:
+   *    manufacturer: "OracleProduction"
+   *    name
+   *    serialNumber
+   *    date of manufacture
+   *    mediaType: "AU"
+   *    audioSpecification
    *
    * @param name Name of the object you create.
    * @param audioSpecification Defines the details of the named audio player.
    */
   public AudioPlayer(String name, String audioSpecification) {
     super(name);
-    mediaType = ItemType.AUDIO;
+    this.mediaType = ItemType.AUDIO;
     this.audioSpecification = audioSpecification; // TODO: is this malformed? Does the logic make sense?
   }
   
@@ -44,25 +61,40 @@ public class AudioPlayer extends Product implements MultimediaControl {
     return super.getSerialNumber();
   }
   
+  /**
+   * Prints statement: "Playing".
+   */
   public void play() {
+    
     System.out.println("Playing");
   }
   
+  /**
+   * Prints statement: "Stopping".
+   */
   public void stop() {
+    
     System.out.println("Stopping");
   }
   
+  /**
+   * Prints statement: "Next".
+   */
   public void next() {
     System.out.println("Next");
   }
   
+  /**
+   * Prints statement: "Previous".
+   */
   public void previous() {
     System.out.println("Previous");
   }
   
   
   /**
-   * Returns super's toString as well as details for audioSpecification and mediaType.
+   * Returns the toString of super (Product) as well as details for audioSpecification and
+   * mediaType.
    *
    * @return Output:  Manufacturer: _____
    *                  Serial Number: _____

@@ -1,9 +1,11 @@
-/*  TODO: AudioPlayerDriver MUST:
-      (*) Instantiate occurrences of itself.
-      (*) Use the media controls (from MultimediaControl)
-      ( ) Print out details using methods from MultimediaControl
+/**
+ * @author      Jonathan J. Troiano
+ * @date        Last updated December 15, 2018
+ * @description Driver class for the AudioPlayer class. Demonstrates functionality by
+ *              instantiating occurrences of itself, using media controls implemented from interface
+ *              MultimediaControl, and prints out details of its object using methods from
+ *              MultimediaControl.
  */
-
 public class AudioPlayerDriver {
   
   /**

@@ -1,9 +1,16 @@
+/**
+ * @author      Jonathan J. Troiano
+ * @date        Last updated December 15, 2018
+ * @description
+ */
+
 import java.text.DateFormat;
 import java.util.Date;
 
 /**
  * The implementation of Comparable here allows us to compare or, in this case sort, objects of this
  * class by some field.
+ *
  */
 public abstract class Product implements Item, Comparable<Product> {
   
@@ -11,46 +18,70 @@ public abstract class Product implements Item, Comparable<Product> {
   private String manufacturer;
   private Date manufacturedOn;
   private String name;
-  private static int currentProductionNumber = 1; // From prompt "store as integer CLASS
-  // VARIABLE"--thus, static.
+  private static int currentProductionNumber = 1; // class variable per prompt
   
   /**
-   * This is sorting by String name for now.
+   * This is used to compare two Product objects by the String instance variable String name.
    *
-   * @param otherProduct Used to compare two Product objects.
-   * @return Returns the name of which Product has precedence.
+   * @param   otherProduct Used to compare two Product objects.
+   * @return  Returns:
+   *            -1: If the calling object is earlier in the alphabet than the parameter.
+   *             0: If the calling object and the parameter start with the same letter.
+   *             1: If the calling object comes later in the alphabet than the parameter.
    */
   @Override
   public int compareTo(Product otherProduct) {
-    return name.compareTo(otherProduct.getName());
+    return this.name.compareTo(otherProduct.getName());
   }
   
-  // TODO: May need to be refactored...
+  /**
+   * Sets global variable currentProductionNumber.
+   *
+   * @param num The int that currentProductionNumber will be set to.
+   */
   @Override
   public void setProductionNumber(int num) {
-    this.currentProductionNumber = num;
+    currentProductionNumber = num;
   }
   
+  /**
+   * Returns instance variable name/
+   *
+   * @return  Return instance variable name
+   */
   @Override
-  public String getName() {
-    return this.name;
-  }
+  public String getName() { return this.name; }
   
+  /**
+   * Returns instance variable for Date object which gets held by the object constructed. Date is
+   * a full GMT-format string of the system time of creation.
+   *
+   * @return  Return instance of Date manufacturedOn in format: Fri Oct 12 05:06:08 EDT 2018
+   */
   @Override
   public Date getManufacturedDate() {
     return this.manufacturedOn;
   }
   
+  /**
+   * Returns class variable serialNumber.
+   *
+   * @return Return class variable serialNumber.
+   */
   @Override
   public int getSerialNumber() {
-    return this.serialNumber;
+    return serialNumber;
   }
   
   /**
    * All created products will get the identifier "OracleProduct" by default, then its name gets set
    * by the parameter. Serial number then gets the NEXT number in production (to prevent duplicate
    * serial numbers) and all products get stamped with the full system GMT date as as object of
-   * class Date.
+   * class Date. Holds the fields:
+   *    manufacturer: "OracleProduction"
+   *    name
+   *    serialNumber
+   *    date of manufacture
    *
    * @param name User-provided name that is an alphanumeric unique identifier for each product.
    */
@@ -68,7 +99,7 @@ public abstract class Product implements Item, Comparable<Product> {
    *
    * Output:  Manufacturer: _____
    *          Serial Number: _____
-   *          Date: _____
+   *          Date: _____cla
    *          Name: _____
    */
   public String toString() {
