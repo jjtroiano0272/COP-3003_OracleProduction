@@ -8,5 +8,8 @@ TODO:
 2) Implement bug checking
 3) Unit testing?
 
-1. DIAGRAMS
+#**1. DIAGRAMS**
 Diagrams for the UML available at lucidchart.com
+
+#**1. DEVELOPER'S STYLISTIC NOTES**
+All '<toString()>' methods end without a new line. Therefore, it is recommended that '<toString>' be passed to '<println'> when used.
