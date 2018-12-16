@@ -1,10 +1,15 @@
 /**
  * @author      Jonathan J. Troiano
- * @date        Last updated December 15, 2018
- * @description
+ * @date        Last updated Sunday, December 16, 2018
+ * @description This class "stamps" all products created with:
+ *
+ *                Manufacturer: _____
+ *                Serial Number: _____
+ *                Date: _____
+ *                Name: _____
  */
 
-import java.text.DateFormat;
+import java.text.DateFormat; // TODO: Remove? Possibly superfluous.
 import java.util.Date;
 
 /**
@@ -15,10 +20,10 @@ import java.util.Date;
 public abstract class Product implements Item, Comparable<Product> {
   
   private int serialNumber;
-  private String manufacturer;
-  private Date manufacturedOn;
-  private String name;
   private static int currentProductionNumber = 1; // class variable per prompt
+  private Date manufacturedOn;
+  private String manufacturer;
+  private String name;
   
   /**
    * This is used to compare two Product objects by the String instance variable String name.
@@ -95,12 +100,13 @@ public abstract class Product implements Item, Comparable<Product> {
   
   /**
    * Passes the Product object which has been constructed, (meaning Date gets current Date/time by
-   * default Date constructor.)
+   * default Date constructor.) Contains a line break at the end.
    *
    * Output:  Manufacturer: _____
    *          Serial Number: _____
-   *          Date: _____cla
+   *          Date: _____
    *          Name: _____
+   *          \n
    */
   public String toString() {
     return  "Manufacturer: " + this.manufacturer + "\n" +

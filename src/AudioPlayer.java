@@ -1,6 +1,6 @@
 /**
  * @author      Jonathan J. Troiano
- * @date        Last updated December 15, 2018
+ * @date        Last updated Sunday, December 16, 2018
  * @description This is a class emblematic of actual audio players that are to be created. All
  *              of these audio players will receive the functionality of MultimediaControl interface
  *              (play, stop, previous, next)
@@ -108,10 +108,6 @@ public class AudioPlayer extends Product implements MultimediaControl {
     return  super.toString() +
             "Audio Spec: " + audioSpecification + "\n" +
             "Type: " + mediaType.toString();
-  }
-  
-  public static void main(String[] args) {
-  
   }
   
 }

@@ -1,6 +1,6 @@
 /**
  * @author      Jonathan J. Troiano
- * @date        Last updated December 15, 2018
+ * @date        Last updated Sunday, December 16, 2018
  * @description Template for all screens produced.
  */
 public class Screen implements ScreenSpec {
@@ -62,7 +62,7 @@ public class Screen implements ScreenSpec {
   @Override
   public String toString() {
     return  "Resolution: " + this.resolution + "\n" +
-        "Refresh rate: " + this.refreshRate + "\n" +
-        "Response time: " + this.responseTime + "\n";
+            "Refresh rate: " + this.refreshRate + "\n" +
+            "Response time: " + this.responseTime + "\n";
   }
 }
