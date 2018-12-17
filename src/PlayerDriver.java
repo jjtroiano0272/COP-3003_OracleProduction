@@ -17,13 +17,14 @@ public class PlayerDriver {
    */
   public static void testPlayer() {
   
-    AudioPlayer audioPlayerObj = new AudioPlayer("AUDIO DUMMY", "AUDIO DUMMY");
+    AudioPlayer audioPlayerObj = new AudioPlayer("iPod Mini", "MP3");
     audioPlayerObj.next();
     audioPlayerObj.play();
     audioPlayerObj.previous();
     audioPlayerObj.stop();
     
-    MoviePlayer moviePlayerObj = new MoviePlayer("MOVIE DUMMY", MonitorType.LCD);
+    MoviePlayer moviePlayerObj = new MoviePlayer("DBPOWER MK101",
+        new Screen("720x480", 40, 22), MonitorType.LCD);
     moviePlayerObj.next();
     moviePlayerObj.play();
     moviePlayerObj.previous();

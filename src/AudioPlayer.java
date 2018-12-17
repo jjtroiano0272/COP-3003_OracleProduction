@@ -96,18 +96,18 @@ public class AudioPlayer extends Product implements MultimediaControl {
    * Returns the toString of super (Product) as well as details for audioSpecification and
    * mediaType.
    *
-   * @return Output:  Manufacturer: _____
-   *                  Serial Number: _____
-   *                  Date: _____
-   *                  Name: _____
-   *                  Audio spec: _____
-   *                  Type: _____
+   * @return Output:  Manufacturer : _____
+   *                  Serial Number : _____
+   *                  Date : _____
+   *                  Name : _____
+   *                  Audio spec : _____
+   *                  Type : _____
    */
   // TODO: Should the parameters here be instance variables???
   public String toString() {
-    return  super.toString() +
-            "Audio Spec: " + audioSpecification + "\n" +
-            "Type: " + mediaType.toString();
+    return  super.toString() + "\n" +
+            "Audio Spec : " + audioSpecification + "\n" +
+            "Type : " + mediaType.toString();
   }
   
 }

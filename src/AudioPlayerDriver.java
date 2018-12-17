@@ -21,13 +21,13 @@ public class AudioPlayerDriver {
    *    "defaultAudioSpec"
    */
   public static void testAudioPlayer() {
-    AudioPlayer ipodMiniObj = new AudioPlayer("iPod Mini", "MP3");
+    AudioPlayer iPodMiniObj = new AudioPlayer("iPod Mini", "MP3");
     AudioPlayer walkmanObj = new AudioPlayer("Walkman", "WAV");
 
-    ipodMiniObj.play();
-    ipodMiniObj.stop();
-    ipodMiniObj.next();
-    ipodMiniObj.previous();
+    iPodMiniObj.play();
+    iPodMiniObj.stop();
+    iPodMiniObj.next();
+    iPodMiniObj.previous();
     
     /**
      * This is what is supposed to print:
@@ -39,7 +39,7 @@ public class AudioPlayerDriver {
      *    Audio Spec : MP3
      *    Type : AUDIO
      */
-    System.out.println(ipodMiniObj.toString());
+    System.out.println(iPodMiniObj.toString());
     System.out.println(walkmanObj.toString());
   }
  

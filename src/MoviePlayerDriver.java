@@ -15,27 +15,35 @@ public class MoviePlayerDriver {
    */
   public static void testMoviePlayer() {
     // These objects will NOT print anything on creation.
-    MoviePlayer moviePlayerObj1 = new MoviePlayer("DBPOWER MK101", MonitorType.LCD);
-    MoviePlayer moviePlayerObj2 = new MoviePlayer("Pyle PDV156BK", MonitorType.LED);
-    AudioPlayer audioPlayerObj = new AudioPlayer("Dummy audio payer", "Dummy audio spec.");
-    
+    AudioPlayer audioPlayerObj1 = new AudioPlayer("iPod Mini", "MP3");
+    AudioPlayer audioPlayerObj2 = new AudioPlayer("Walkman", "WAV ");
+    MoviePlayer moviePlayerObj1 = new MoviePlayer("DBPOWER MK101",
+        new Screen("720x480", 40, 22), MonitorType.LCD);
+    MoviePlayer moviePlayerObj2 = new MoviePlayer("Pyle PDV156BK",
+        new Screen("1366x768", 40, 22), MonitorType.LED);
+
     /**
-     * This is what is supposed to print:
+     * This is what is supposed to print for each object:
      *
-     *
+     * Manufacturer : _____
+     *    Serial Number : _____
+     *    Date : _____
+     *    Name : _____
+     *    Monitor Type : _____
+     *    Screen resolution : _____
      */
     System.out.println(moviePlayerObj1.toString());
     System.out.println(moviePlayerObj2.toString());
   
-    audioPlayerObj.next();
-    audioPlayerObj.play();
-    audioPlayerObj.previous();
-    audioPlayerObj.stop();
+    audioPlayerObj1.next();
+    audioPlayerObj1.play();
+    audioPlayerObj2.previous();
+    audioPlayerObj2.stop();
   
     moviePlayerObj1.next();
     moviePlayerObj1.play();
-    moviePlayerObj1.previous();
-    moviePlayerObj1.stop();
+    moviePlayerObj2.previous();
+    moviePlayerObj2.stop();
   }
   
 }

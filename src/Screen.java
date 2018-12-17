@@ -55,14 +55,14 @@ public class Screen implements ScreenSpec {
   /**
    * Returns a string of the instance variables.
    *
-   * @return  Resolution: _____
-   *          Refresh rate: _____
-   *          Response time: _____
+   * @return  Resolution : _____
+   *          Refresh rate : _____
+   *          Response time : _____
    */
   @Override
   public String toString() {
-    return  "Resolution: " + this.resolution + "\n" +
-            "Refresh rate: " + this.refreshRate + "\n" +
-            "Response time: " + this.responseTime + "\n";
+    return  "Resolution : " + this.resolution + "\n" +
+            "Refresh rate : " + this.refreshRate + "\n" +
+            "Response time : " + this.responseTime;
   }
 }

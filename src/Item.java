@@ -2,7 +2,7 @@
  * @author      Jonathan J. Troiano
  * @date        Last updated Sunday, December 16, 2018
  * @description Contains fields and methods:
- *                String manufacturer : "OracleProduction"
+ *                String manufacturer: "OracleProduction"
  *                void: setProductionNumber(int num)
  *                String: getName()
  *                Date: getManufacturedDate()

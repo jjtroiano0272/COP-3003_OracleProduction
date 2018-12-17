@@ -102,17 +102,17 @@ public abstract class Product implements Item, Comparable<Product> {
    * Passes the Product object which has been constructed, (meaning Date gets current Date/time by
    * default Date constructor.) Contains a line break at the end.
    *
-   * Output:  Manufacturer: _____
-   *          Serial Number: _____
-   *          Date: _____
-   *          Name: _____
+   * Output:  Manufacturer : _____
+   *          Serial Number : _____
+   *          Date : _____
+   *          Name : _____
    *          \n
    */
   public String toString() {
-    return  "Manufacturer: " + this.manufacturer + "\n" +
-            "Serial Number: " + serialNumber + "\n" +
-            "Date: " + this.manufacturedOn + "\n" +
-            "Name: " + name + "\n";
+    return  "Manufacturer : " + this.manufacturer + "\n" +
+            "Serial Number : " + serialNumber + "\n" +
+            "Date : " + this.manufacturedOn + "\n" +
+            "Name : " + name;
   }
 }
 

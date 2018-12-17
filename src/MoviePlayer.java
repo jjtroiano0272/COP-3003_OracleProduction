@@ -8,7 +8,7 @@
 public class MoviePlayer extends Product implements MultimediaControl {
   
   // TODO: Variable screen may need to be replaced...Not sure how this should be used per client.
-  private ItemType screen;
+  private Screen screen;
   private MonitorType monitorType;
   
   /**
@@ -25,10 +25,10 @@ public class MoviePlayer extends Product implements MultimediaControl {
    * @param name Name of the object you create.
    * @param monitorType Can be set to LED or LCD
    */
-  // TODO: May need to be reformatted here...possible Logic error.
-  public MoviePlayer(String name, MonitorType monitorType) {
+  // TODO: May need to be reformatted here...possible logic error.
+  public MoviePlayer(String name, Screen screen, MonitorType monitorType) {
     super(name);
-    this.screen = ItemType.VISUAL;
+    this.screen = screen;
     this.monitorType = monitorType;
   }
   
@@ -65,22 +65,21 @@ public class MoviePlayer extends Product implements MultimediaControl {
   }
   
   /**
-   * @return Returns super (Product) toString as well as monitor type & screen resolution and
-   * breaks a new line at the end.
+   * @return Returns super (Product) toString as well as monitor type & screen resolution.
    *
    * Expected output:
-   *    Manufacturer: _____
-   *    Serial Number: _____
-   *    Date: _____
-   *    Name: _____
-   *    Monitor Type: _____
-   *    Screen resolution: _____
+   *    Manufacturer : _____
+   *    Serial Number : _____
+   *    Date : _____
+   *    Name : _____
+   *    Monitor Type : _____
+   *    Screen resolution : _____
    */
   @Override
   public String toString() {
-    return  super.toString() +
-            "Monitor Type: " + this.monitorType + "\n" +
-            "Screen resolution: " + this.screen;
+    return  super.toString() + "\n" +
+            "Monitor Type : " + this.monitorType + "\n" +
+            "Screen resolution : " + this.screen;
   }
   
 }
